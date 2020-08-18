@@ -16,6 +16,6 @@
     "autoload": {
         "psr-4": {"joeybab3\\Database\\": "src/"}
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {}
 }
