@@ -1,2 +1,2 @@
 # Database
-Simple, almost useless pdo database wrapper
+A simple, almost useless PDO database wrapper
