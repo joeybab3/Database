@@ -12,5 +12,8 @@
             "homepage": "http://joeybabcock.me",
             "role": "Developer"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {"joeybab3\\Database\\": "src/"}
+    },
 }
