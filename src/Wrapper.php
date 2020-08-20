@@ -1,10 +1,10 @@
 <?php
-    namespace Joeybab3;
+    namespace Joeybab3\Database;
 	use PDO;
 	
-    class Database {	 
+    class Wrapper {	 
 	    
-	    //Database
+	    //Database wrapper
 		private $dbhost = "localhost";
 		private $dbport = "";
 		private $dbuser;
