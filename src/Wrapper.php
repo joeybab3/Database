@@ -5,22 +5,25 @@
     class Wrapper {	 
 	    
 	    //Database wrapper
-		private $dbhost = "localhost";
-		private $dbport = "";
+		private $dbhost;
+		private $dbport;
 		private $dbuser;
 		private $dbpass;
 		private $dbname;
+		
 		private $dbh;
 		public $db = false;
 		public $set = false;
 		private $version = "Database - v0.1";
 		private $debug = false;
 	   
-	    public function __construct($username, $password, $dbname)
+	    public function __construct($username, $password, $dbname, $dbhost = "localhost", $dbport = null)
 	    {
 			$this->dbuser = $username;
 			$this->dbpass = $password;
 			$this->dbname = $dbname;
+			$this->dbhost = $dbhost;
+			$this->dbport = $dbport;
 	    }
 		
 		public function setDebug($debug = true)
