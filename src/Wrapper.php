@@ -93,8 +93,8 @@
 		{
 			$result =  $this->dbh->prepare("SELECT * FROM $table WHERE ? = ? LIMIT 1;");
 			
-			$result->bindParam(1, $field);
-			$result->bindParam(2, $value);
+			$result->bindValue(1, $field);
+			$result->bindValue(2, $value);
 			
 			return $result;
 		}
