@@ -88,5 +88,20 @@
 			
 			return $result !== true;
 		}
+		
+		public fetchSingle($table, $field, $value)
+		{
+			$result =  $this->dbh->prepare("SELECT * FROM $table WHERE ? = ? LIMIT 1;");
+			
+			$result->bindParam(1, $field);
+			$result->bindParam(2, $value);
+			
+			return $result;
+		}
+		
+		public function fetchSingleById($table, $id)
+		{
+			return $this->fetchSingle($table, "id", $id);
+		}
     }
 ?>
