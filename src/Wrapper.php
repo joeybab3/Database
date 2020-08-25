@@ -41,7 +41,7 @@
 			$this->dbh = $conn;	
 		}
 		
-		public function init($source=null)
+		public function init($source = null)
 		{
 			try
 			{
@@ -102,6 +102,11 @@
 		public function fetchSingleById($table, $id)
 		{
 			return $this->fetchSingle($table, "id", $id);
+		}
+		
+		public function isInit()
+		{
+			return $this->db;
 		}
     }
 ?>
