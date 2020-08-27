@@ -5,3 +5,5 @@
 	$D = new Database("username","password","database");
 	
 	echo "Works";
+	
+	// Will show if there's syntax errors
