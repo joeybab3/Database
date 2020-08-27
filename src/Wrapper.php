@@ -76,7 +76,8 @@
 			return $this->dbh->prepare($query);
 		}
 		
-		public function tableExists($table) {
+		public function tableExists($table)
+		{
 			try 
 			{
 				$result = $this->dbh->query("SELECT 1 FROM $table LIMIT 1");
