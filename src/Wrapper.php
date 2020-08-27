@@ -89,7 +89,7 @@
 			return $result !== true;
 		}
 		
-		public fetchSingle($table, $field, $value)
+		public function fetchSingle($table, $field, $value)
 		{
 			$result =  $this->dbh->prepare("SELECT * FROM $table WHERE ? = ? LIMIT 1;");
 			
