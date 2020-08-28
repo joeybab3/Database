@@ -16,8 +16,9 @@
 		public $set = false;
 		private $version = "Database - v0.1";
 		private $debug = false;
+		protected $error;
 	   
-	    public function __construct($username, $password, $dbname, $dbhost = "localhost", $dbport = null)
+	    public function __construct($username, $password, $dbname, $dbhost = "localhost", $dbport = "")
 	    {
 			$this->dbuser = $username;
 			$this->dbpass = $password;
@@ -52,6 +53,7 @@
 			}
 			catch(PDOException $e) {
 				$this->error = $e;
+				$this->db = false;
 	      		return false;
 	    	}
 		}
