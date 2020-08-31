@@ -41,7 +41,7 @@
 			$this->dbh = $conn;	
 		}
 		
-		public function init($source = null)
+		public function init()
 		{
 			try
 			{
@@ -88,12 +88,13 @@
 		
 		public function fetchSingle($table, $field, $value)
 		{
-			$result =  $this->dbh->prepare("SELECT * FROM $table WHERE ? = ? LIMIT 1;");
+			$result =  $this->dbh->prepare("SELECT * FROM `$table` WHERE `$field` = ? LIMIT 1;");
 			
-			$result->bindValue(1, $field);
-			$result->bindValue(2, $value);
+			$result->bindValue(1, $value);
 			
-			return $result;
+			$result->execute();
+			
+			return $result->fetch(PDO::FETCH_ASSOC);
 		}
 		
 		public function fetchSingleById($table, $id)
