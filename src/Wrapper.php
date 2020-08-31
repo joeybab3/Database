@@ -14,7 +14,6 @@
 		private $dbh;
 		public $db = false;
 		public $set = false;
-		private $version = "Database - v0.1";
 		private $debug = false;
 		protected $error;
 	   
@@ -56,11 +55,6 @@
 				$this->db = false;
 	      		return false;
 	    	}
-		}
-		
-		public function getVersion()
-		{
-			return $this->version;
 		}
 		
 		public function getDatabaseName()
